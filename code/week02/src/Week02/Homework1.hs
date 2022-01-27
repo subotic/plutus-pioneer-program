@@ -32,7 +32,7 @@ import Data.Aeson (Value(Bool))
 {-# INLINEABLE mkValidator #-}
 -- This should validate if and only if the two Booleans in the redeemer are equal!
 mkValidator :: () -> (Bool, Bool) -> ScriptContext -> Bool
-mkValidator _ (first, second) _ = traceIfFalse "redeemer bools not equal" $ first == second
+mkValidator () (first, second) _ = traceIfFalse "redeemer bools not equal" $ first == second
 
 data Typed
 
